@@ -1,0 +1,28 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Python
+pycache/
+*.py[cod]
+.venv/
+venv/
+
+# Database
+*.sqlite
+*.sqlite3
+*.db
+data/
+
+# Telegram sessions
+*.session
+*.session-journal
+
+# Logs
+logs/
+*.log
+
+# IDE
+.vscode/
+.idea/
