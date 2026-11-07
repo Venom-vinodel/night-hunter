@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#11101b">
+  <title>Night Hunter</title>
+  <link rel="stylesheet" href="/assets/style.css">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script defer src="/assets/app.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand-mark">NH</div>
+      <div class="brand-copy">
+        <div class="eyebrow">COLLECTIBLE MARKET MONITOR</div>
+        <h1>Night Hunter</h1>
+      </div>
+      <div class="connection" id="connection"><span class="connection-dot"></span><span id="connection-label">Подключение</span></div>
+    </header>
+
+    <main>
+      <section class="hero-card">
+        <div class="hero-glow"></div>
+        <div class="hero-content">
+          <div class="eyebrow">ПАНЕЛЬ МОНИТОРИНГА</div>
+          <h2>Рынок под<br><span>наблюдением.</span></h2>
+          <p>Предложения за Telegram Stars, сравнение характеристик и история цен.</p>
+        </div>
+        <div class="hero-symbol" aria-hidden="true">◈</div>
+      </section>
+
+      <section class="stats-grid" aria-label="Статистика">
+        <article class="stat-card"><span class="stat-label">Объявления</span><strong id="stat-offers">—</strong><span class="stat-foot">в базе</span></article>
+        <article class="stat-card"><span class="stat-label">История цен</span><strong id="stat-history">—</strong><span class="stat-foot">записей</span></article>
+        <article class="stat-card"><span class="stat-label">Сигналы</span><strong id="stat-alerts">—</strong><span class="stat-foot">сохранено</span></article>
+      </section>
+
+      <nav class="tabs" aria-label="Разделы">
+        <button class="tab active" data-view="overview">Обзор</button>
+        <button class="tab" data-view="search">Поиск</button>
+        <button class="tab" data-view="history">История</button>
+        <button class="tab" data-view="alerts">Сигналы</button>
+        <button class="tab" data-view="collection">Коллекция</button>
+      </nav>
+
+      <section class="view active" id="view-overview">
+        <div class="section-heading"><div><div class="eyebrow">LIVE DATA</div><h3>Последние предложения</h3></div><button class="text-button" id="refresh-button">Обновить ↻</button></div>
+        <div id="overview-offers" class="offer-list"><div class="empty-state">Загружаем данные…</div></div>
+      </section>
+
+      <section class="view" id="view-search">
+        <div class="section-heading"><div><div class="eyebrow">DATABASE</div><h3>Поиск предложений</h3></div></div>
+        <label class="search-box"><span>⌕</span><input id="search-input" type="search" placeholder="Название, модель, фон или ID" autocomplete="off"></label>
+        <div id="search-results" class="offer-list"><div class="empty-state">Введи запрос для поиска по сохранённым объявлениям.</div></div>
+      </section>
+
+      <section class="view" id="view-history">
+        <div class="section-heading"><div><div class="eyebrow">PRICE TRACKING</div><h3>История цен</h3></div></div>
+        <div id="history-list" class="data-list"><div class="empty-state">Загружаем историю…</div></div>
+      </section>
+
+      <section class="view" id="view-alerts">
+        <div class="section-heading"><div><div class="eyebrow">PRICE DIFFERENCE</div><h3>Сигналы</h3></div></div>
+        <div id="alerts-list" class="data-list"><div class="empty-state">Загружаем сигналы…</div></div>
+      </section>
+
+      <section class="view" id="view-collection">
+        <div class="section-heading"><div><div class="eyebrow">WATCHLIST</div><h3>Моя коллекция</h3></div></div>
+        <p class="section-note">Здесь отображаются типы подарков из твоего списка наблюдения.</p>
+        <div id="collection-list" class="data-list"><div class="empty-state">Загружаем список…</div></div>
+      </section>
+
+      <div class="notice" id="notice" role="status">Открывай приложение через меню своего Telegram-бота.</div>
+    </main>
+    <footer> NIGHT HUNTER <span>•</span> MANUAL REVIEW ONLY </footer>
+  </div>
+</body>
+</html>
